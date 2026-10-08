@@ -54,14 +54,14 @@ The prototype currently checks:
 
 ## How It Works
 
-1. An alcohol label image is loaded into the notebook.
-2. Tesseract OCR extracts readable text from the image.
-3. Expected application information is stored in Python.
+1. A reviewer enters the expected application information.
+2. The reviewer uploads an alcohol label image.
+3. Tesseract OCR extracts readable text from the image.
 4. Text-based fields, such as brand name and class/type, are compared using fuzzy text matching.
 5. Structured values such as alcohol percentage and net contents are extracted using regular expressions.
 6. The government warning is checked for presence.
 7. Each field receives a result of `PASS`, `REVIEW`, or `MISMATCH`.
-8. The results are displayed in a pandas DataFrame.
+8. The results are displayed in a verification table.
 9. An overall verification result is generated.
 
 ---
@@ -76,6 +76,7 @@ The prototype currently checks:
 - pandas
 - RapidFuzz
 - Regular expressions
+- Streamlit
 
 ---
 
@@ -89,6 +90,29 @@ The prototype currently checks:
 - `README.md` — project documentation
 
 ---
+## Using the Deployed Application
+
+The live application can be used without installing Python or Tesseract locally.
+
+1. Open the deployed application:
+   https://christine-ttb-label-verification.streamlit.app
+
+2. Enter the expected application information:
+   - Brand name
+   - Class / type
+   - Alcohol content (ABV)
+   - Net contents
+
+3. Upload a clear PNG or JPG image of the alcohol label.
+
+4. Select **Verify Label**.
+
+5. Review the field-level results and overall verification result.
+
+Fields that cannot be confidently verified are marked `REVIEW` for human inspection.
+
+---
+
 
 ## Setup Instructions
 
