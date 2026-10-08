@@ -74,6 +74,7 @@ The prototype currently checks:
 ## Project Files
 
 - `ttb_label_verification.ipynb` — main prototype notebook
+- `app.py` — deployable web application for testing the label verification prototype
 - `sample_label.png` — sample alcohol label used for testing
 - `requirements.txt` — Python package requirements
 - `README.md` — project documentation
@@ -240,7 +241,6 @@ Potential future enhancements include:
 - Additional beverage-specific compliance rules
 - Improved handling of angled or low-quality label images
 - Integration with application systems such as COLA
-- A web-based user interface for compliance reviewers
 
 ## Prototype Status
 
