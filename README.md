@@ -119,10 +119,13 @@ in Jupyter Notebook.
 Run the cells in order from top to bottom.
 
 
-Application Data
-For this prototype, application information is entered directly into a Python Dictionary.
+## Application Data
+
+For this prototype, application information is entered directly into a Python dictionary.
 
 Example:
+
+```python
 application = {
     "brand": "Tito's",
     "class_type": "Vodka",
@@ -132,7 +135,7 @@ application = {
 
 This represents information that a reviewer would already have from the application and wants to verify against the submitted label.
 
-Verification Logic
+## Verification Logic
 
 Brand Name and Class / Type
 Text fields are compared using fuzzy text matching.
