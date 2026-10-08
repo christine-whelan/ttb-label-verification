@@ -90,30 +90,33 @@ Python 3.x is required.
 
 Tesseract OCR must be installed separately from the Python packages.
 
-
-So that section should look exactly like:
-
-```markdown
 For Windows, this prototype uses the default installation path:
 
-```text
+~~~text
 C:\Program Files\Tesseract-OCR\tesseract.exe
+~~~
 
 If Tesseract is installed in another location, update the path in the notebook.
 
 ### 3. Install Python Requirements
+
 Install the required Python packages using:
 
+~~~bash
 pip install -r requirements.txt
+~~~
 
 ### 4. Open the Notebook
+
 Open:
 
+~~~text
 ttb_label_verification.ipynb
+~~~
 
-in Jupyter Notebook
+in Jupyter Notebook.
 
-Run the calls in order from top to bottom.
+Run the cells in order from top to bottom.
 
 
 Application Data
