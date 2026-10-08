@@ -22,7 +22,6 @@ st.set_page_config(
 # TESSERACT SETUP
 # --------------------------------------------------
 
-# Automatically locate Tesseract in the deployment environment
 tesseract_path = shutil.which("tesseract")
 
 if tesseract_path:
@@ -168,8 +167,13 @@ net_contents = st.text_input(
 
 st.header("2. Upload Label Image")
 
+st.write(
+    "For best results, upload a clear, straight-on image "
+    "with readable label text."
+)
+
 uploaded_file = st.file_uploader(
-    "Upload a clear PNG or JPG image of the alcohol label.",
+    "Choose an image",
     type=["png", "jpg", "jpeg"]
 )
 
@@ -186,7 +190,7 @@ if uploaded_file is not None:
 
 
 # --------------------------------------------------
-# VERIFY BUTTON
+# VERIFICATION
 # --------------------------------------------------
 
 st.header("3. Verification")
@@ -237,7 +241,9 @@ if verify_button:
 
         try:
 
-            with st.spinner("Reading label and checking information..."):
+            with st.spinner(
+                "Reading label and checking information..."
+            ):
 
                 ocr_text = pytesseract.image_to_string(img)
 
@@ -422,7 +428,7 @@ if verify_button:
 
 
         # ------------------------------------------
-        # RESULT EXPLANATION
+        # RESULT GUIDE
         # ------------------------------------------
 
         st.subheader("Result Guide")
