@@ -32,6 +32,14 @@ A manual review is still required whenever the system cannot confidently verify 
 
 ---
 
+## Live Application
+
+The deployed prototype is available at:
+
+https://christine-ttb-label-verification.streamlit.app
+
+---
+
 ## Fields Checked
 
 The prototype currently checks:
@@ -73,10 +81,11 @@ The prototype currently checks:
 
 ## Project Files
 
-- `ttb_label_verification.ipynb` — main prototype notebook
 - `app.py` — deployable web application for testing the label verification prototype
+- `ttb_label_verification.ipynb` — main prototype notebook
 - `sample_label.png` — sample alcohol label used for testing
 - `requirements.txt` — Python package requirements
+- `packages.txt` — system package required to install Tesseract OCR for deployment
 - `README.md` — project documentation
 
 ---
